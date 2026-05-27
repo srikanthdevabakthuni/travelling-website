@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destination Gallery — TravelHappy</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gallery-item { transition: opacity 0.3s; }
+  </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-none d-md-flex align-items-center gap-4">
+        <span><i class="fas fa-phone me-1" style="color:var(--primary)"></i> +1 800 TRAVEL NOW</span>
+        <span><i class="fas fa-envelope me-1" style="color:var(--primary)"></i> hello@travelhappy.com</span>
+      </div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg main-navbar">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <i class="fas fa-paper-plane" style="color:var(--primary);font-size:28px"></i>
+      <span>Travel<em>Happy</em></span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+        <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.html">Book Now</a></li>
+        <li class="nav-item ms-lg-3">
+          <a href="booking.html" class="btn-primary-custom">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero" style="background-image:linear-gradient(rgba(15,15,26,0.7),rgba(15,15,26,0.7)),url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80')">
+  <div class="container">
+    <h1>Destination Gallery</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" style="color:rgba(255,255,255,0.6)">Home</a></li>
+        <li class="breadcrumb-item active">Gallery</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- Gallery -->
+<section class="section-padding gallery-section">
+  <div class="container">
+    <div class="section-title text-center fade-up">
+      <span class="sub-title">Our Destinations</span>
+      <h2>Explore the World Through Our Lens</h2>
+      <p>Browse breathtaking photos from our travelers across the globe. Let these inspire your next adventure.</p>
+    </div>
+
+    <!-- Filter -->
+    <div class="gallery-filter text-center fade-up">
+      <button class="btn-filter active" data-filter="all">All</button>
+      <button class="btn-filter" data-filter="asia">Asia</button>
+      <button class="btn-filter" data-filter="europe">Europe</button>
+      <button class="btn-filter" data-filter="oceania">Oceania</button>
+      <button class="btn-filter" data-filter="nature">Nature</button>
+      <button class="btn-filter" data-filter="city">City</button>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="gallery-grid fade-up" id="galleryGrid">
+
+      <div class="gallery-item" data-cat="asia">
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80" alt="Bali">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Bali Rice Terraces</h6>
+          <small>Bali, Indonesia</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="europe">
+        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="Paris">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Eiffel Tower at Dusk</h6>
+          <small>Paris, France</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="nature">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Nepal">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Himalayan Sunrise</h6>
+          <small>Nepal</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="oceania">
+        <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80" alt="Maldives">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Overwater Bungalow</h6>
+          <small>Maldives</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="asia">
+        <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80" alt="Thailand">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Temple at Sunset</h6>
+          <small>Chiang Mai, Thailand</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="city">
+        <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=600&q=80" alt="Singapore">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Marina Bay Sands</h6>
+          <small>Singapore</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="nature">
+        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80" alt="Camping">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Northern Lights Camp</h6>
+          <small>Iceland</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="europe">
+        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Rome">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Colosseum</h6>
+          <small>Rome, Italy</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="asia">
+        <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Japan">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Cherry Blossom Avenue</h6>
+          <small>Kyoto, Japan</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="nature">
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Mountains">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Alpine Lake</h6>
+          <small>Swiss Alps</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="asia">
+        <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=600&q=80" alt="Sri Lanka">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Tea Plantation</h6>
+          <small>Nuwara Eliya, Sri Lanka</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="city">
+        <img src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=600&q=80" alt="New York">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Manhattan Skyline</h6>
+          <small>New York, USA</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="europe">
+        <img src="https://images.unsplash.com/photo-1543349689-9a4d426bee8e?w=600&q=80" alt="Barcelona">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Sagrada Família</h6>
+          <small>Barcelona, Spain</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="nature">
+        <img src="https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?w=600&q=80" alt="Safari">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>African Safari</h6>
+          <small>Masai Mara, Kenya</small>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-cat="oceania">
+        <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80" alt="Sydney">
+        <div class="overlay">
+          <div class="icon"><i class="fas fa-search-plus"></i></div>
+          <h6>Sydney Opera House</h6>
+          <small>Sydney, Australia</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox">
+  <button class="lb-close"><i class="fas fa-times"></i></button>
+  <button class="lb-nav lb-prev"><i class="fas fa-chevron-left"></i></button>
+  <img src="" alt="Gallery Image">
+  <button class="lb-nav lb-next"><i class="fas fa-chevron-right"></i></button>
+</div>
+
+<!-- Testimonials -->
+<section class="section-padding testimonials-section">
+  <div class="container">
+    <div class="section-title text-center fade-up">
+      <span class="sub-title">Happy Travelers</span>
+      <h2>What Our Clients Say</h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b078?w=100&q=80" class="avatar" alt="Sarah">
+          <p>The Bali package exceeded all expectations. From the rice terrace hikes to the beach clubs — every moment was perfectly organized. Will definitely book again!</p>
+          <h6>Sarah Johnson</h6>
+          <span class="role">Travel Blogger, USA</span>
+          <div class="star-rating mt-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" class="avatar" alt="James">
+          <p>Nepal trekking was a life-changing experience. The guides were knowledgeable, the views were breathtaking, and the whole trip was seamlessly managed. 10/10!</p>
+          <h6>James Wilson</h6>
+          <span class="role">Adventure Photographer, UK</span>
+          <div class="star-rating mt-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" class="avatar" alt="Emma">
+          <p>Paris Romance package was absolutely magical. The boutique hotel, Seine cruise, and wine tasting were perfectly curated. Our anniversary will never be forgotten!</p>
+          <h6>Emma Roberts</h6>
+          <span class="role">Interior Designer, Canada</span>
+          <div class="star-rating mt-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container text-center fade-up">
+    <h2>Ready for Your Next Adventure?</h2>
+    <p>Book your dream vacation today and create memories that last a lifetime.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap">
+      <a href="packages.html" class="btn-primary-custom">View Packages</a>
+      <a href="booking.html" class="btn-outline-custom" style="border-color:#fff;color:#fff">Book Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6">
+        <h5>About TravelHappy</h5>
+        <p>Your trusted travel partner offering curated tours and unforgettable experiences across 500+ destinations worldwide since 2009.</p>
+        <div class="social-links mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Home</a></li>
+          <li><a href="packages.html"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Packages</a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Gallery</a></li>
+          <li><a href="booking.html"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Book Now</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-6">
+        <h5>Newsletter</h5>
+        <p style="font-size:14px">Subscribe for exclusive deals and travel inspiration.</p>
+        <div class="newsletter-form mt-3">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email address">
+            <button class="btn"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Instagram Feed</h5>
+        <div class="insta-grid">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=100&q=70" alt="">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=100&q=70" alt="">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&q=70" alt="">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=100&q=70" alt="">
+          <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=100&q=70" alt="">
+          <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=100&q=70" alt="">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=100&q=70" alt="">
+          <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=100&q=70" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      Copyright &copy; 2025 <a href="#">TravelHappy</a>. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

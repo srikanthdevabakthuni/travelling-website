@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelHappy — Magical Travel Experiences</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-none d-md-flex align-items-center gap-4">
+        <span><i class="fas fa-map-marker-alt me-1" style="color:var(--primary)"></i> 123 Travel ,Banjara hills,HYD</span>
+        <span><i class="fas fa-phone me-1" style="color:var(--primary)"></i> +1 800 TRAVEL NOW</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <span class="d-none d-md-inline"><i class="fas fa-envelope me-1" style="color:var(--primary)"></i> hello@travelhappy.com</span>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg main-navbar">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <i class="fas fa-paper-plane" style="color:var(--primary);font-size:28px"></i>
+      <span>Travel<em>Happy</em></span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.html">Book Now</a></li>
+        <li class="nav-item ms-lg-3">
+          <a href="booking.html" class="btn-primary-custom">Get Started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <div class="hero-content">
+          <span class="sub-title"><i class="fas fa-compass me-1"></i> Away from monotonous life</span>
+          <h1>Magical<br>Travel<br><span style="color:var(--primary)">Experience</span></h1>
+          <p>Discover breathtaking destinations around the world. We make your dream vacation a reality with carefully curated packages and unforgettable experiences.</p>
+          <div class="d-flex gap-3 flex-wrap">
+            <a href="packages.html" class="btn-primary-custom">Explore Packages</a>
+            <a href="gallery.html" class="btn-outline-custom" style="color:#fff;border-color:#fff">View Gallery</a>
+          </div>
+          <!-- Stats -->
+          <div class="row mt-5 g-3">
+            <div class="col-4">
+              <div style="text-align:center;color:#fff">
+                <div style="font-size:32px;font-weight:700;font-family:'Playfair Display',serif;color:var(--primary)">
+                  <span class="counter" data-target="500">0</span>+
+                </div>
+                <small style="opacity:.7;font-size:12px;letter-spacing:1px;text-transform:uppercase">Destinations</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div style="text-align:center;color:#fff">
+                <div style="font-size:32px;font-weight:700;font-family:'Playfair Display',serif;color:var(--primary)">
+                  <span class="counter" data-target="12000">0</span>+
+                </div>
+                <small style="opacity:.7;font-size:12px;letter-spacing:1px;text-transform:uppercase">Happy Clients</small>
+              </div>
+            </div>
+            <div class="col-4">
+              <div style="text-align:center;color:#fff">
+                <div style="font-size:32px;font-weight:700;font-family:'Playfair Display',serif;color:var(--primary)">
+                  <span class="counter" data-target="15">0</span>+
+                </div>
+                <small style="opacity:.7;font-size:12px;letter-spacing:1px;text-transform:uppercase">Years Exp.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 mt-5 mt-lg-0">
+        <!-- Search Box -->
+        <div class="search-box fade-up">
+          <ul class="nav nav-tabs" id="searchTabs">
+            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#flights"><i class="fas fa-plane me-1"></i>Flights</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#hotels"><i class="fas fa-hotel me-1"></i>Hotels</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#holidays"><i class="fas fa-umbrella-beach me-1"></i>Holidays</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="flights">
+              <div class="row g-3">
+                <div class="col-6">
+                  <label>From</label>
+                  <input type="text" class="form-control" placeholder="Hyderabad, ">
+                </div>
+                <div class="col-6">
+                  <label>To</label>
+                  <input type="text" class="form-control" placeholder="Paris, FR">
+                </div>
+                <div class="col-6">
+                  <label>Departure</label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="col-6">
+                  <label>Return</label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="col-12">
+                  <label>Passengers</label>
+                  <select class="form-select">
+                    <option>1 Adult</option>
+                    <option>2 Adults</option>
+                    <option>2 Adults, 1 Child</option>
+                    <option>Family (2+2)</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <a href="booking.html" class="btn-primary-custom d-block text-center">Search Flights</a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="hotels">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label>Destination</label>
+                  <input type="text" class="form-control" placeholder="City, Country">
+                </div>
+                <div class="col-6">
+                  <label>Check-in</label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="col-6">
+                  <label>Check-out</label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="col-12">
+                  <label>Guests</label>
+                  <select class="form-select">
+                    <option>1 Guest</option>
+                    <option>2 Guests</option>
+                    <option>3 Guests</option>
+                    <option>4+ Guests</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <a href="booking.html" class="btn-primary-custom d-block text-center">Search Hotels</a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="holidays">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label>Destination</label>
+                  <select class="form-select">
+                    <option>Bali, Indonesia</option>
+                    <option>Paris, France</option>
+                    <option>Maldives</option>
+                    <option>Nepal</option>
+                    <option>Thailand</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <label>Travel Date</label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="col-6">
+                  <label>Duration</label>
+                  <select class="form-select">
+                    <option>3 Days</option>
+                    <option>5 Days</option>
+                    <option>7 Days</option>
+                    <option>10 Days</option>
+                    <option>14 Days</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <a href="booking.html" class="btn-primary-custom d-block text-center">Search Holidays</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Popular Destinations -->
+<section class="section-padding destinations-section">
+  <div class="container">
+    <div class="section-title text-center fade-up">
+      <span class="sub-title">Explore the World</span>
+      <h2>Popular Destinations</h2>
+      <p>We all live in an age that belongs to the young at heart. Discover our most sought-after travel destinations.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="dest-card">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&q=80" alt="Bali">
+            <span class="price-badge">From $1,200</span>
+          </div>
+          <div class="card-body">
+            <h4>Bali Adventure</h4>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Bali, Indonesia</p>
+          </div>
+          <div class="card-footer">
+            <div class="star-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <span style="color:#777;margin-left:5px;font-size:12px">(128 reviews)</span>
+            </div>
+            <a href="packages.html">Book Now <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="dest-card">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=600&q=80" alt="Paris">
+            <span class="price-badge">From $2,500</span>
+          </div>
+          <div class="card-body">
+            <h4>Dream City — Paris</h4>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Paris, France</p>
+          </div>
+          <div class="card-footer">
+            <div class="star-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              <span style="color:#777;margin-left:5px;font-size:12px">(214 reviews)</span>
+            </div>
+            <a href="packages.html">Book Now <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="dest-card">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Nepal">
+            <span class="price-badge">From $350</span>
+          </div>
+          <div class="card-body">
+            <h4>Cloud Mountains</h4>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Nepal</p>
+          </div>
+          <div class="card-footer">
+            <div class="star-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <span style="color:#777;margin-left:5px;font-size:12px">(96 reviews)</span>
+            </div>
+            <a href="packages.html">Book Now <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="dest-card">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&q=80" alt="Maldives">
+            <span class="price-badge">From $3,500</span>
+          </div>
+          <div class="card-body">
+            <h4>Maldives Luxury</h4>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Maldives</p>
+          </div>
+          <div class="card-footer">
+            <div class="star-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              <span style="color:#777;margin-left:5px;font-size:12px">(183 reviews)</span>
+            </div>
+            <a href="packages.html">Book Now <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="dest-card">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=600&q=80" alt="Thailand">
+            <span class="price-badge">From $1,400</span>
+          </div>
+          <div class="card-body">
+            <h4>Thailand Explorer</h4>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Bangkok, Thailand</p>
+          </div>
+          <div class="card-footer">
+            <div class="star-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+              <span style="color:#777;margin-left:5px;font-size:12px">(74 reviews)</span>
+            </div>
+            <a href="packages.html">Book Now <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="dest-card">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=600&q=80" alt="Singapore">
+            <span class="price-badge">From $1,600</span>
+          </div>
+          <div class="card-body">
+            <h4>Singapore City Tour</h4>
+            <p class="location"><i class="fas fa-map-marker-alt"></i> Singapore</p>
+          </div>
+          <div class="card-footer">
+            <div class="star-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              <span style="color:#777;margin-left:5px;font-size:12px">(112 reviews)</span>
+            </div>
+            <a href="packages.html">Book Now <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5 fade-up">
+      <a href="packages.html" class="btn-outline-custom">View All Packages <i class="fas fa-arrow-right ms-1"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Tour Packages Pricing -->
+<section class="section-padding packages-section">
+  <div class="container">
+    <div class="section-title text-center fade-up">
+      <span class="sub-title">Choose Your Plan</span>
+      <h2>We Provide Affordable Prices</h2>
+      <p>Well-curated packages for every kind of traveler — from budget backpackers to luxury seekers.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="pkg-col bg-white p-4 rounded-3 shadow-sm h-100">
+          <div class="d-flex align-items-center mb-3">
+            <div style="width:45px;height:45px;background:rgba(249,115,22,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:20px;margin-right:12px">
+              <i class="fas fa-suitcase"></i>
+            </div>
+            <h5 class="mb-0">Cheap Packages</h5>
+          </div>
+          <ul class="pkg-list">
+            <li>New York <span>$1,500</span></li>
+            <li>Maldives <span>$1,500</span></li>
+            <li>Sri Lanka <span>$1,200</span></li>
+            <li>Nepal <span>$800</span></li>
+            <li>Thailand <span>$1,100</span></li>
+            <li>Singapore <span>$1,400</span></li>
+          </ul>
+          <div class="mt-4">
+            <a href="booking.html" class="btn-primary-custom d-block text-center">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="pkg-col p-4 rounded-3 h-100" style="background:var(--dark);color:#fff;position:relative;overflow:hidden">
+          <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:var(--primary);border-radius:50%;opacity:.15"></div>
+          <div style="position:absolute;bottom:-30px;left:-30px;width:100px;height:100px;background:var(--primary);border-radius:50%;opacity:.1"></div>
+          <div class="d-flex align-items-center mb-3">
+            <div style="width:45px;height:45px;background:rgba(249,115,22,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:20px;margin-right:12px">
+              <i class="fas fa-crown"></i>
+            </div>
+            <h5 class="mb-0" style="color:#fff">Luxury Packages</h5>
+          </div>
+          <ul class="pkg-list" style="color:rgba(255,255,255,0.8)">
+            <li style="border-color:rgba(255,255,255,0.1)">New York <span>$4,500</span></li>
+            <li style="border-color:rgba(255,255,255,0.1)">Maldives <span>$5,500</span></li>
+            <li style="border-color:rgba(255,255,255,0.1)">Dubai <span>$4,200</span></li>
+            <li style="border-color:rgba(255,255,255,0.1)">Paris <span>$4,800</span></li>
+            <li style="border-color:rgba(255,255,255,0.1)">Bali <span>$3,200</span></li>
+            <li style="border-color:rgba(255,255,255,0.1)">Singapore <span>$3,800</span></li>
+          </ul>
+          <div class="mt-4">
+            <a href="booking.html" class="btn-primary-custom d-block text-center">Book Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="pkg-col bg-white p-4 rounded-3 shadow-sm h-100">
+          <div class="d-flex align-items-center mb-3">
+            <div style="width:45px;height:45px;background:rgba(249,115,22,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:20px;margin-right:12px">
+              <i class="fas fa-campground"></i>
+            </div>
+            <h5 class="mb-0">Camping Packages</h5>
+          </div>
+          <ul class="pkg-list">
+            <li>Rocky Mountains <span>$900</span></li>
+            <li>Patagonia <span>$1,800</span></li>
+            <li>New Zealand <span>$2,100</span></li>
+            <li>Norway Fjords <span>$2,400</span></li>
+            <li>Iceland <span>$2,200</span></li>
+            <li>Banff, Canada <span>$1,500</span></li>
+          </ul>
+          <div class="mt-4">
+            <a href="booking.html" class="btn-primary-custom d-block text-center">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section-padding services-section">
+  <div class="container">
+    <div class="section-title text-center fade-up">
+      <span class="sub-title">What We Offer</span>
+      <h2>Other Issues We Can Help You With</h2>
+      <p>We provide a comprehensive range of travel services to make your journey smooth and enjoyable.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6 fade-up">
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-car"></i></div>
+          <h5>Rent a Car</h5>
+          <p>Explore your destination at your own pace with our premium car rental services worldwide.</p>
+          <a href="#" style="color:var(--primary);font-size:13px;font-weight:600">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up">
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-ship"></i></div>
+          <h5>Cruise Booking</h5>
+          <p>Sail through magnificent waters with our carefully selected luxury cruise packages.</p>
+          <a href="#" style="color:var(--primary);font-size:13px;font-weight:600">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up">
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-clipboard-list"></i></div>
+          <h5>Travel Itinerary</h5>
+          <p>Let our experts plan every detail of your trip for a seamless, worry-free experience.</p>
+          <a href="#" style="color:var(--primary);font-size:13px;font-weight:600">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 fade-up">
+        <div class="service-card">
+          <div class="icon"><i class="fas fa-utensils"></i></div>
+          <h5>Food Features</h5>
+          <p>Discover local cuisines and food tours curated to immerse you in authentic culinary culture.</p>
+          <a href="#" style="color:var(--primary);font-size:13px;font-weight:600">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section-padding testimonials-section">
+  <div class="container">
+    <div class="section-title text-center fade-up">
+      <span class="sub-title">Happy Travelers</span>
+      <h2>Testimonials from Our Clients</h2>
+      <p>What our travelers say about their unforgettable experiences with TravelHappy.</p>
+    </div>
+    <div class="row g-4 fade-up">
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b078?w=100&q=80" class="avatar" alt="Harriet">
+          <p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you'll get. TravelHappy made our honeymoon absolutely magical!</p>
+          <h6>Harriet Maxwell</h6>
+          <span class="role">Travel Enthusiast</span>
+          <div class="star-rating mt-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" class="avatar" alt="Carolyn">
+          <p>A purpose is the eternal condition for success. TravelHappy's team handled everything flawlessly — from flights to hotel, every detail was perfect. Highly recommend for anyone planning a luxury getaway!</p>
+          <h6>Carolyn Craig</h6>
+          <span class="role">Adventure Blogger</span>
+          <div class="star-rating mt-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="testimonial-card">
+          <div class="quote-icon">"</div>
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" class="avatar" alt="Marcus">
+          <p>I've traveled with many agencies but TravelHappy stands out for its genuine care for the traveler. Our Nepal trekking expedition was perfectly organized. Already planning my next trip with them!</p>
+          <h6>Marcus Reid</h6>
+          <span class="role">Mountain Trekker</span>
+          <div class="star-rating mt-2">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container position-relative">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center fade-up">
+        <span class="sub-title" style="color:var(--primary);font-size:12px;letter-spacing:3px;font-weight:700;text-transform:uppercase;display:block;margin-bottom:15px">Custom Package</span>
+        <h2>Did not find your Package?<br>Feel free to ask us.</h2>
+        <p>We'll create a tailor-made travel experience just for you. Tell us your dream destination and budget, and we'll handle everything.</p>
+        <a href="booking.html" class="btn-primary-custom">Request Custom Package <i class="fas fa-arrow-right ms-2"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog -->
+<section class="section-padding blog-section">
+  <div class="container">
+    <div class="section-title text-center fade-up">
+      <span class="sub-title">Travel Tips & Stories</span>
+      <h2>Latest from Our Blog</h2>
+      <p>Stay inspired with travel stories, tips, and destination guides from around the world.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="blog-card">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=80" alt="Blog">
+          </div>
+          <div class="card-body">
+            <div class="tags">
+              <span class="badge">Travel</span>
+              <span class="badge">Lifestyle</span>
+            </div>
+            <h5><a href="#">10 Budget Travel Tips to Explore More for Less</a></h5>
+            <p style="font-size:13px;color:#777">Discover how savvy travelers stretch every dollar without compromising on experiences…</p>
+            <span class="date"><i class="far fa-calendar me-1"></i> May 10, 2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="blog-card">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="Blog">
+          </div>
+          <div class="card-body">
+            <div class="tags">
+              <span class="badge">Adventure</span>
+              <span class="badge">Asia</span>
+            </div>
+            <h5><a href="#">The Ultimate Guide to Backpacking Southeast Asia</a></h5>
+            <p style="font-size:13px;color:#777">From the temples of Cambodia to the beaches of the Philippines, here's everything you need to know…</p>
+            <span class="date"><i class="far fa-calendar me-1"></i> April 22, 2025</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 fade-up">
+        <div class="blog-card">
+          <div class="img-wrap">
+            <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=600&q=80" alt="Blog">
+          </div>
+          <div class="card-body">
+            <div class="tags">
+              <span class="badge">Europe</span>
+              <span class="badge">Luxury</span>
+            </div>
+            <h5><a href="#">Why Paris Remains the World's Most Romantic City</a></h5>
+            <p style="font-size:13px;color:#777">From cobblestone streets to candlelit bistros, Paris casts an undeniable spell on every visitor…</p>
+            <span class="date"><i class="far fa-calendar me-1"></i> March 15, 2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4 col-md-6">
+        <h5>About TravelHappy</h5>
+        <p>TravelHappy is your trusted travel partner, offering meticulously curated tours and unforgettable experiences across 500+ destinations worldwide since 2009.</p>
+        <div class="social-links mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-3 col-6">
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Home</a></li>
+          <li><a href="packages.html"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Packages</a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Gallery</a></li>
+          <li><a href="booking.html"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Book Now</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Blog</a></li>
+          <li><a href="#"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-3 col-6">
+        <h5>Newsletter</h5>
+        <p style="font-size:14px">Subscribe to get exclusive travel deals and latest updates.</p>
+        <div class="newsletter-form mt-3">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email address">
+            <button class="btn"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+        <p style="font-size:12px;color:rgba(255,255,255,0.3);margin-top:10px">No spam, unsubscribe anytime.</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h5>Instagram Feed</h5>
+        <div class="insta-grid">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=100&q=70" alt="insta">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=100&q=70" alt="insta">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&q=70" alt="insta">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=100&q=70" alt="insta">
+          <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?w=100&q=70" alt="insta">
+          <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?w=100&q=70" alt="insta">
+          <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=100&q=70" alt="insta">
+          <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=100&q=70" alt="insta">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      Copyright &copy; 2025 <a href="#">TravelHappy</a>. All Rights Reserved. Designed with <i class="fas fa-heart" style="color:var(--primary)"></i> for travelers.
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll Top -->
+<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Tour — TravelHappy</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="d-none d-md-flex align-items-center gap-4">
+        <span><i class="fas fa-phone me-1" style="color:var(--primary)"></i> +1 800 TRAVEL NOW</span>
+        <span><i class="fas fa-envelope me-1" style="color:var(--primary)"></i> hello@travelhappy.com</span>
+      </div>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg main-navbar">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <i class="fas fa-paper-plane" style="color:var(--primary);font-size:28px"></i>
+      <span>Travel<em>Happy</em></span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="packages.html">Packages</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link active" href="booking.html">Book Now</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<div class="page-hero">
+  <div class="container">
+    <h1>Book Your Tour</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" style="color:rgba(255,255,255,0.6)">Home</a></li>
+        <li class="breadcrumb-item active">Booking</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- Booking Section -->
+<section class="section-padding booking-form-section">
+  <div class="container">
+    <div class="row g-5 justify-content-center">
+      <!-- Form -->
+      <div class="col-lg-8">
+        <div class="booking-card fade-up">
+          <div class="booking-header">
+            <h3><i class="fas fa-clipboard-list me-2"></i>Complete Your Booking</h3>
+            <p>Fill in your details below to reserve your spot. Takes only 3 minutes!</p>
+          </div>
+          <div class="booking-body">
+
+            <!-- Step Indicator -->
+            <div class="step-indicator">
+              <div class="step active" id="step-1">
+                <div class="dot">1</div>
+                <label>Trip Details</label>
+              </div>
+              <div class="step" id="step-2">
+                <div class="dot">2</div>
+                <label>Personal Info</label>
+              </div>
+              <div class="step" id="step-3">
+                <div class="dot">3</div>
+                <label>Payment</label>
+              </div>
+              <div class="step" id="step-4">
+                <div class="dot"><i class="fas fa-check" style="font-size:11px"></i></div>
+                <label>Confirm</label>
+              </div>
+            </div>
+
+            <form id="bookingForm" novalidate>
+
+              <!-- Step 1: Trip Details -->
+              <div class="form-step">
+                <h5 class="mb-4" style="font-size:17px;color:var(--dark)"><i class="fas fa-map-marked-alt me-2" style="color:var(--primary)"></i>Trip Details</h5>
+                <div class="row g-3">
+                  <div class="col-md-12">
+                    <label class="form-label">Select Package</label>
+                    <select class="form-select" id="packageSelect" required>
+                      <option value="">— Choose a Package —</option>
+                      <option>Bali Adventure</option>
+                      <option>Paris Romance</option>
+                      <option>Maldives Luxury</option>
+                      <option>Nepal Trekking</option>
+                      <option>Thailand Explorer</option>
+                      <option>Singapore City Tour</option>
+                      <option>Iceland Northern Lights</option>
+                      <option>Sri Lanka Heritage</option>
+                      <option>Japan Cherry Blossom</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a travel package.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Travel Date</label>
+                    <input type="date" class="form-control" id="travelDate" required>
+                    <div class="invalid-feedback">Please select your travel date.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Return Date</label>
+                    <input type="date" class="form-control" required>
+                    <div class="invalid-feedback">Please select your return date.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Adults</label>
+                    <select class="form-select" required>
+                      <option value="">Select</option>
+                      <option>1 Adult</option>
+                      <option>2 Adults</option>
+                      <option>3 Adults</option>
+                      <option>4+ Adults</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Children</label>
+                    <select class="form-select">
+                      <option>0 Children</option>
+                      <option>1 Child</option>
+                      <option>2 Children</option>
+                      <option>3+ Children</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="form-label">Room Type</label>
+                    <select class="form-select" required>
+                      <option value="">Select</option>
+                      <option>Standard Room</option>
+                      <option>Deluxe Room</option>
+                      <option>Suite</option>
+                      <option>Villa</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Special Requests</label>
+                    <textarea class="form-control" rows="3" placeholder="Any special dietary requirements, accessibility needs, or preferences..."></textarea>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end mt-4">
+                  <button type="button" class="btn-next btn-primary-custom">Next: Personal Info <i class="fas fa-arrow-right ms-2"></i></button>
+                </div>
+              </div>
+
+              <!-- Step 2: Personal Info -->
+              <div class="form-step" style="display:none">
+                <h5 class="mb-4" style="font-size:17px;color:var(--dark)"><i class="fas fa-user me-2" style="color:var(--primary)"></i>Personal Information</h5>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control" placeholder="John" required>
+                    <div class="invalid-feedback">Please enter your first name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" placeholder="Doe" required>
+                    <div class="invalid-feedback">Please enter your last name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-control" placeholder="john@example.com" required>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" placeholder="+1 234 567 8900" required>
+                    <div class="invalid-feedback">Please enter your phone number.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Nationality</label>
+                    <select class="form-select" required>
+                      <option value="">Select Nationality</option>
+                      <option>American</option>
+                      <option>British</option>
+                      <option>Canadian</option>
+                      <option>Australian</option>
+                      <option>Indian</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Passport Number</label>
+                    <input type="text" class="form-control" placeholder="AB1234567" required>
+                    <div class="invalid-feedback">Please enter your passport number.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Passport Expiry</label>
+                    <input type="date" class="form-control" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Home Address</label>
+                    <input type="text" class="form-control" placeholder="Street, City, Country" required>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="newsletter">
+                      <label class="form-check-label" for="newsletter" style="font-size:13px">Subscribe to our newsletter for exclusive deals</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mt-4">
+                  <button type="button" class="btn-back btn-outline-custom"><i class="fas fa-arrow-left me-2"></i>Back</button>
+                  <button type="button" class="btn-next btn-primary-custom">Next: Payment <i class="fas fa-arrow-right ms-2"></i></button>
+                </div>
+              </div>
+
+              <!-- Step 3: Payment -->
+              <div class="form-step" style="display:none">
+                <h5 class="mb-4" style="font-size:17px;color:var(--dark)"><i class="fas fa-credit-card me-2" style="color:var(--primary)"></i>Payment Details</h5>
+
+                <!-- Payment Method -->
+                <div class="mb-4">
+                  <label class="form-label">Payment Method</label>
+                  <div class="d-flex gap-3 flex-wrap">
+                    <label class="d-flex align-items-center gap-2 p-3 border rounded-2 cursor-pointer" style="cursor:pointer;flex:1;min-width:130px">
+                      <input type="radio" name="payMethod" value="card" checked>
+                      <i class="fas fa-credit-card" style="color:var(--primary)"></i>
+                      <span style="font-size:13px;font-weight:600">Credit Card</span>
+                    </label>
+                    <label class="d-flex align-items-center gap-2 p-3 border rounded-2 cursor-pointer" style="cursor:pointer;flex:1;min-width:130px">
+                      <input type="radio" name="payMethod" value="paypal">
+                      <i class="fab fa-paypal" style="color:#003087"></i>
+                      <span style="font-size:13px;font-weight:600">PayPal</span>
+                    </label>
+                    <label class="d-flex align-items-center gap-2 p-3 border rounded-2 cursor-pointer" style="cursor:pointer;flex:1;min-width:130px">
+                      <input type="radio" name="payMethod" value="bank">
+                      <i class="fas fa-university" style="color:#1a1a2e"></i>
+                      <span style="font-size:13px;font-weight:600">Bank Transfer</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label">Cardholder Name</label>
+                    <input type="text" class="form-control" placeholder="Name as on card" required>
+                    <div class="invalid-feedback">Please enter the cardholder name.</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">Card Number</label>
+                    <input type="text" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19" id="cardNum" required>
+                    <div class="invalid-feedback">Please enter your card number.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">Expiry Date</label>
+                    <input type="text" class="form-control" placeholder="MM / YY" maxlength="7" required>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label">CVV</label>
+                    <input type="text" class="form-control" placeholder="123" maxlength="4" required>
+                  </div>
+                  <div class="col-12">
+                    <div class="alert" style="background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2);border-radius:6px;padding:12px 15px;font-size:13px;color:#555">
+                      <i class="fas fa-lock me-2" style="color:var(--primary)"></i>
+                      Your payment is secured with 256-bit SSL encryption. We never store your card details.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="terms" required>
+                      <label class="form-check-label" for="terms" style="font-size:13px">
+                        I agree to the <a href="#" style="color:var(--primary)">Terms & Conditions</a> and <a href="#" style="color:var(--primary)">Cancellation Policy</a>
+                      </label>
+                      <div class="invalid-feedback">You must agree before submitting.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mt-4">
+                  <button type="button" class="btn-back btn-outline-custom"><i class="fas fa-arrow-left me-2"></i>Back</button>
+                  <button type="submit" class="btn-primary-custom">
+                    <i class="fas fa-check-circle me-2"></i>Confirm Booking
+                  </button>
+                </div>
+              </div>
+
+            </form>
+
+            <!-- Success -->
+            <div id="bookingSuccess" style="display:none;text-align:center;padding:40px 20px">
+              <div style="width:80px;height:80px;background:#d4edda;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:36px;color:#28a745">
+                <i class="fas fa-check"></i>
+              </div>
+              <h3 style="color:var(--dark);margin-bottom:10px">Booking Confirmed!</h3>
+              <p style="color:#777;max-width:400px;margin:0 auto 25px">
+                Thank you for booking with TravelHappy! Your booking reference is <strong style="color:var(--primary)">#TRV-2025-8847</strong>. A confirmation email has been sent to your inbox.
+              </p>
+              <a href="index.html" class="btn-primary-custom">Back to Home</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Summary -->
+      <div class="col-lg-4">
+        <div class="summary-card fade-up">
+          <div class="sum-header">
+            <h5><i class="fas fa-receipt me-2"></i>Booking Summary</h5>
+          </div>
+          <div class="sum-body">
+            <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=400&q=70" class="sum-img" alt="Package" id="summaryImage">
+            <div class="sum-item">
+              <span style="color:#888">Package</span>
+              <span id="summaryPkg" style="font-weight:600;text-align:right;max-width:60%">—</span>
+            </div>
+            <div class="sum-item">
+              <span style="color:#888">Duration</span>
+              <span>7 Days</span>
+            </div>
+            <div class="sum-item">
+              <span style="color:#888">Travelers</span>
+              <span>2 Adults</span>
+            </div>
+            <div class="sum-item">
+              <span style="color:#888">Accommodation</span>
+              <span>Included</span>
+            </div>
+            <div class="sum-item">
+              <span style="color:#888">Meals</span>
+              <span>Breakfast</span>
+            </div>
+            <div class="sum-item">
+              <span style="color:#888">Transfers</span>
+              <span>Included</span>
+            </div>
+            <div class="sum-total">
+              <span>Total Price</span>
+              <span class="price" id="summaryPrice">—</span>
+            </div>
+            <div style="margin-top:15px;padding:12px;background:rgba(249,115,22,.08);border-radius:6px;font-size:12px;color:#666">
+              <i class="fas fa-info-circle me-1" style="color:var(--primary)"></i>
+              Price includes taxes & service fees. Free cancellation up to 30 days before departure.
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Card -->
+        <div class="bg-white rounded-3 shadow-sm p-4 mt-4 fade-up">
+          <h6 style="font-size:15px;margin-bottom:15px">Need Help?</h6>
+          <p style="font-size:13px;color:#777;margin-bottom:12px">Our travel experts are available 24/7 to assist you.</p>
+          <a href="tel:+18001234567" class="d-flex align-items-center gap-2 mb-2" style="color:var(--dark);font-size:14px;font-weight:600">
+            <i class="fas fa-phone" style="color:var(--primary)"></i> +1 800 TRAVEL NOW
+          </a>
+          <a href="mailto:hello@travelhappy.com" class="d-flex align-items-center gap-2" style="color:var(--dark);font-size:14px;font-weight:600">
+            <i class="fas fa-envelope" style="color:var(--primary)"></i> hello@travelhappy.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <h5>About TravelHappy</h5>
+        <p>Your trusted travel partner for unforgettable journeys across 500+ destinations since 2009.</p>
+        <div class="social-links mt-3">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h5>Quick Links</h5>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Home</a></li>
+          <li><a href="packages.html"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Packages</a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right me-2" style="font-size:10px;color:var(--primary)"></i>Gallery</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5>Newsletter</h5>
+        <div class="newsletter-form">
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn"><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      Copyright &copy; 2025 <a href="#">TravelHappy</a>. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop"><i class="fas fa-chevron-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+// Format card number
+const cardInput = document.getElementById('cardNum');
+if (cardInput) {
+  cardInput.addEventListener('input', function() {
+    let v = this.value.replace(/\D/g,'').substring(0,16);
+    this.value = v.replace(/(.{4})/g,'$1 ').trim();
+  });
+}
+// Pre-select package from URL
+const urlParams = new URLSearchParams(window.location.search);
+const pkgParam = urlParams.get('pkg');
+if (pkgParam) {
+  const sel = document.getElementById('packageSelect');
+  if (sel) {
+    for (let opt of sel.options) {
+      if (opt.value.toLowerCase().includes(pkgParam.toLowerCase().split('+')[0])) {
+        opt.selected = true;
+        sel.dispatchEvent(new Event('change'));
+        break;
+      }
+    }
+  }
+}
+</script>
+</body>
+</html>
